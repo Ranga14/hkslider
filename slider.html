@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Slider</title>
+
+<link type="text/css" rel="stylesheet" href="styles.css">
+
+<script>
+	function rotateImages() {
+		var obj = document.getElementsByTagName(img);
+		
+		var rotateInterval = 10000;
+		var currentImage = 0;
+		
+		setInterval("rotate('test','div')",1000);
+		
+		document.write(".slider", obj).prepend();
+		document.write(".slider", obj).prepend($(".slider", obj).clone().css(""));
+		document.write(".slider", obj).append($(".slider", obj).clone());
+	}
+</script>
+
+</head>
+
+<body>
+
+<div id="Contain">
+	<script>
+        function rotator(options) {
+    
+            var a = options.delay;
+            var b = options.media;
+            var mediaArr = [];
+    
+            for(var i = 0, j = b.length; i < j; i++) {          
+                mediaArr.push(b[i].img);
+            }
+    
+            document.write('<div id="slider"></div>');
+            var container = document.getElementById('slider');
+            var Start = -1;
+    
+            rotatorCore();
+    
+            function rotatorCore() {
+                Start = Start + 1;
+    
+                if(Start >= mediaArr.length)
+                    Start = 0;
+                container.innerHTML = mediaArr[Start];          
+                setTimeout(rotatorCore, a);
+            }
+        }
+    
+        rotator({
+                delay : 3500,
+                media : [{
+                    img : '<img src="home1.jpg" alt="" />'
+                }, {
+                    img : '<img src="home2.jpg" alt="" />'
+                }, {
+                    img : '<img src="home3.jpg" alt="" />'
+                }, {
+                    img : '<img src="home4.jpg" alt="" />'
+                }]
+        });
+    </script>
+</div>
+
+</div>
+
+</body>
+</html>

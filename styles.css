@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+
+body			{ margin: 0; padding: 0; }
+#Contain		{ margin: 0 auto; width: 940px; margin-top: 12px; }
+.slider 		{ height: 496px; width: 940px; }
+.slider img		{ border: 0; position: absolute; }
